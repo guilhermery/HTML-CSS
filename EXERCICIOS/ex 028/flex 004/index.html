@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible box</title>
+    <style>
+        div.conteiner {
+            background-color: lightblue;
+            display: flex;
+            height: 300px;
+            flex-flow: row wrap;
+            justify-content: space-around;/*Sempre no eixo principal, space beetwen começa no start e termina no end, space around cria box que alinham um item no centro, space around cria espaços iguais entre todos os itens e entre as duas pontas, center centraliza tudo junto. O flex start o primeiro item fica no start e o flex end é o contrário*/
+            align-items: center;
+        }
+        div.item{
+            background-color: salmon;
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="item">Exemplo de A</div>
+        <div class="item">Exemplo de B</div>
+        <div class="item">Exemplo de C</div>
+        <div class="item">Exemplo de D</div>
+        <div class="item">Exemplo de E</div>
+        <div class="item">Exemplo de F</div>
+        <div class="item">Exemplo de G</div>
+        <div class="item">Exemplo de H</div>
+    </div>
+</body>
+</html>
