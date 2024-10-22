@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible box</title>
+    <style>
+        div.conteiner {
+            background-color: lightblue;
+            display: flex;
+            flex-flow: row wrap;
+            height: 400px;
+            align-items: flex-start;
+        }
+        div.item{
+            background-color: salmon;
+            border: 1px solid black;
+            text-align: center;
+            padding: 20px;
+        }
+        div#I1 {
+            order: 0;
+            align-self: flex-start; /*servem para flexibilizar itens dentro do conteiner*/
+        }
+
+        div#I2{
+            order: 2;
+            align-self: flex-end;
+        }
+
+        div#I6 {
+            align-self: center;
+        }
+
+        div#I7 {
+            align-self: stretch;
+        }
+        
+        div#I8 {
+            align-self: auto; /*herda do conteiner pai*/
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="item" id="I1">A</div>
+        <div class="item" id="I2">B</div>
+        <div class="item" id="I3">C</div>
+        <div class="item" id="I4" style="order: -3">D</div> <!--Por padrão todos os order são 0-->
+        <div class="item" id="I5">E</div>
+        <div class="item" id="I6">F</div>
+        <div class="item" id="I7">G</div>
+        <div class="item" id="I8">H</div>
+    </div>
+</body>
+</html>
