@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible box</title>
+    <style>
+        div.conteiner {
+            background-color: lightblue;
+            display: flex;
+            flex-flow: row nowrap;
+        }
+        div.item{
+            background-color: salmon;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        div#n1 {
+            flex: 1 0 250px; /*shorthand que começa do grow, shrink e depois basis. O valor padrão pra flex é 0 1 auto, grow 0, shrink 1 e basis auto. Mas pode botar também flex initial*/
+        }
+
+        div#n2 {
+            flex: 1 1 auto; /*Ele pode aumentar e diminuir a vontade e o limite é o tamanho do conteúdo*/
+        }
+
+        div#n3 {
+            flex: 0 0 auto; /*Não é flexível, pode ser utilzado flex: none também*/
+        }
+
+        div#n4 {
+            flex: 3; /*Somente o gorw é definido nesse flex, o shrink e o basis são padrão (0 e auto)*/
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="item" id="n1">A</div>
+        <div class="item" id="n2">B</div>
+        <div class="item" id="n3">C</div>
+        <div class="item" id="n4">D</div>
+    </div>
+</body>
+</html>
